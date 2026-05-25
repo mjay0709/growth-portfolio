@@ -316,11 +316,19 @@ export default function PortfolioHomepage() {
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/mjay7/"
               className="border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 transition-all px-6 py-3 rounded-xl text-[#F5F7FA]"
             >
               LinkedIn
             </a>
+            <a
+  href="/resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 transition-all px-6 py-3 rounded-xl text-[#F5F7FA]"
+>
+  Download Resume
+</a>
           </div>
         </div>
       </section>
