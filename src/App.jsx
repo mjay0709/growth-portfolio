@@ -1,3 +1,5 @@
+import { Routes, Route, Link } from 'react-router-dom'
+import CaseStudy from './pages/CaseStudy'
 export default function PortfolioHomepage() {
   const philosophyCards = [
     {
@@ -44,6 +46,8 @@ export default function PortfolioHomepage() {
 ]
 
   return (
+  <Routes>
+    <Route path="/" element={
     <div className="min-h-screen bg-[#0B0F14] text-[#F5F7FA] antialiased overflow-x-hidden">
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-3xl rounded-full pointer-events-none" />
@@ -212,9 +216,12 @@ export default function PortfolioHomepage() {
               </p>
             </div>
 
-            <button className="border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 transition-all px-6 py-3 rounded-xl text-[#F5F7FA]">
-              Read Full Case Study →
-            </button>
+           <Link
+  to="/case-study"
+  className="inline-block border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 transition-all px-6 py-3 rounded-xl text-[#F5F7FA]"
+>
+  Read Full Case Study →
+</Link>
           </div>
         </div>
       </section>
@@ -333,5 +340,9 @@ export default function PortfolioHomepage() {
         </div>
       </section>
     </div>
-  );
+     } />
+
+    <Route path="/case-study" element={<CaseStudy />} />
+  </Routes>
+);
 }
